@@ -11,16 +11,19 @@ export default function Main(){
   
   const [currentWord, setCurrentWord] = useState('react')
   const [letter, setLetter] = useState([])
+  console.log(currentWord)
   console.log(letter)
 
 const wordDisplay = currentWord.split('').map((word, index) => <Word word={word.toUpperCase()} key={index}/>)
 
 function getLetter(newLetter){
-  setLetter(prevLetter => [...prevLetter, newLetter])
-  
+  setLetter(prevLetter => 
+    prevLetter.includes(newLetter) ? prevLetter : [...prevLetter, newLetter]
+  )
+  return newLetter
 }
- 
 
+ 
   return(
     <main>
       <Header/>
