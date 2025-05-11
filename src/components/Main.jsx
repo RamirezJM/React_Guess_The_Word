@@ -11,10 +11,11 @@ export default function Main(){
   
   const [currentWord, setCurrentWord] = useState('react')
   const [letter, setLetter] = useState([])
-  console.log(currentWord)
-  console.log(letter)
+ 
+ const wrongCounter = letter.filter(keyLetter => !currentWord.includes(keyLetter)).length
+  console.log(wrongCounter)
 
-const wordDisplay = currentWord.split('').map((word, index) => <Word word={word.toUpperCase()} key={index}/>)
+const wordDisplay = currentWord.split('').map((word, index) => <Word word={letter.includes(word) ? word.toUpperCase(): ''} key={index} />)
 
 function getLetter(newLetter){
   setLetter(prevLetter => 
@@ -32,7 +33,7 @@ function getLetter(newLetter){
       <section className="word-container">
       {wordDisplay}
       </section>
-      <Keyboard getLetter={getLetter}/>
+      <Keyboard getLetter={getLetter} currentWord={currentWord} letter={letter}/>
     </main>
   )
 }

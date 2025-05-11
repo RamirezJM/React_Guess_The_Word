@@ -72,11 +72,19 @@ header>p{
   gap: .5em;
 
 }
-.key{
+.keyboard>button{
   background-color: #Fcba29;
   padding: .5em;
   border-radius: 5px;
   border: #F9F4DA 1px solid;
   font-size: 1.2em;
   font-weight: 600;
+}
+
+.keyboard>button.correct{
+  background-color: #10A95B;
+}
+.keyboard>button.wrong{
+  background-color: #EC5D49;
+
 }
