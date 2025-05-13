@@ -1,6 +1,6 @@
 import { clsx } from "clsx"
 
-export default function Keyboard({getLetter, currentWord, letter}){
+export default function Keyboard({getLetter, currentWord, letter, gameOver}){
 
   const alphabet = "abcdefghijklmnopqrstuvwxyz"
   const keys = alphabet.split('').map(key => {
@@ -14,7 +14,7 @@ export default function Keyboard({getLetter, currentWord, letter}){
     })
  
 
-    return (<button className={keyClass} key={key} onClick={() => getLetter(key)}>
+    return (<button className={keyClass} key={key} onClick={() => getLetter(key)} disabled={gameOver}>
     {key.toUpperCase()}</button>)})
   
    

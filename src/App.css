@@ -41,6 +41,10 @@ header>p{
 .status.gameLost{
   background-color: #ba2a2a;
 }
+.status.farewell{
+  background-color: #7A5EA7;
+}
+
 .languages{
   width: 80%;
   display: flex;
