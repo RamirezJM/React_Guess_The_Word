@@ -1,6 +1,6 @@
 
-export default function NewGameButton(){
+export default function NewGameButton({newGame}){
   return(
-    <button className="new-game-btn">New Game</button>
+    <button className="new-game-btn" onClick={newGame}>New Game</button>
   )
 }

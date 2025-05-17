@@ -76,7 +76,7 @@ header>p{
   margin-block: 2em;
   text-align: center;
 }
-.word-container>span{
+.word-container > span{
   background-color: #323232;
   color: #F9F4DA;
   font-size: 1.5rem;
@@ -85,6 +85,10 @@ header>p{
   margin-inline: .2em;
   border-bottom: #F9F4DA 2px solid;
   
+}
+
+.word-container > span .missed-letter{
+  color: #ba2a2a;
 }
 
 .keyboard{
